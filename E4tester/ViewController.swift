@@ -4,11 +4,12 @@
 //
 
 import UIKit
+import SwiftOSC
 
 class ViewController: UITableViewController {
     
     
-    static let EMPATICA_API_KEY = "ADD_YOUR_KEY_HERE"
+    static let EMPATICA_API_KEY = "b126a440999a45c8b4564c4987471695"
     
     
     private var devices: [EmpaticaDeviceManager] = []
@@ -138,6 +139,11 @@ class ViewController: UITableViewController {
             
             self.discover()
         }
+    }
+    
+    // Send the data using OSC to a laptop
+    public func sendData() {
+        
     }
 }
 

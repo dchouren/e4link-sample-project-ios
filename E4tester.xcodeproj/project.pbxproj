@@ -3,18 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		525687F4276A8922003EB94D /* SwiftOSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525687F3276A88EE003EB94D /* SwiftOSC.framework */; };
+		525687F5276A8922003EB94D /* SwiftOSC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 525687F3276A88EE003EB94D /* SwiftOSC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		52EB3AAF2768201E0022DE6E /* E4link.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EB3AAE2768201E0022DE6E /* E4link.framework */; };
+		52EB3AEC276985210022DE6E /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EB3AEB276985210022DE6E /* NetworkExtension.framework */; };
 		55591B691F2884AC0084CF0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55591B681F2884AC0084CF0C /* AppDelegate.swift */; };
 		55591B6B1F2884AC0084CF0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55591B6A1F2884AC0084CF0C /* ViewController.swift */; };
 		55591B6E1F2884AC0084CF0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55591B6C1F2884AC0084CF0C /* Main.storyboard */; };
 		55591B701F2884AC0084CF0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55591B6F1F2884AC0084CF0C /* Assets.xcassets */; };
 		55591B731F2884AC0084CF0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55591B711F2884AC0084CF0C /* LaunchScreen.storyboard */; };
-		59CAB61E207770890052910F /* E4link.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CAB61D207770890052910F /* E4link.framework */; };
 		59CAB626207771C30052910F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CAB625207771C30052910F /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		525687F2276A88EE003EB94D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 525687EE276A88EE003EB94D /* iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 036486761F820BBD00F3D6CE;
+			remoteInfo = SwiftOSC;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		59899B6D207634A900FAF40A /* Embed Frameworks */ = {
@@ -23,6 +36,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				525687F5276A8922003EB94D /* SwiftOSC.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -30,6 +44,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		525687EE276A88EE003EB94D /* iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iOS.xcodeproj; path = SwiftOSC/Framework/iOS/iOS.xcodeproj; sourceTree = "<group>"; };
+		52EB3AAE2768201E0022DE6E /* E4link.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = E4link.framework; sourceTree = "<group>"; };
+		52EB3AEA276985210022DE6E /* E4tester.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = E4tester.entitlements; sourceTree = "<group>"; };
+		52EB3AEB276985210022DE6E /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		52EB3AF3276989F90022DE6E /* iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iOS; path = ../../../Code/SwiftOSC/Framework/iOS; sourceTree = "<group>"; };
+		52EB3AF427698A150022DE6E /* SwiftOSC */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftOSC; path = ../../../Code/SwiftOSC; sourceTree = "<group>"; };
 		55591B651F2884AC0084CF0C /* E4tester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = E4tester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55591B681F2884AC0084CF0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55591B6A1F2884AC0084CF0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,7 +57,6 @@
 		55591B6F1F2884AC0084CF0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55591B721F2884AC0084CF0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55591B741F2884AD0084CF0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		59CAB61D207770890052910F /* E4link.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = E4link.framework; path = Libs/E4link.framework; sourceTree = "<group>"; };
 		59CAB6222077716E0052910F /* E4tester-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "E4tester-Bridging-Header.h"; sourceTree = "<group>"; };
 		59CAB625207771C30052910F /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -47,17 +66,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				525687F4276A8922003EB94D /* SwiftOSC.framework in Frameworks */,
 				59CAB626207771C30052910F /* CoreBluetooth.framework in Frameworks */,
-				59CAB61E207770890052910F /* E4link.framework in Frameworks */,
+				52EB3AEC276985210022DE6E /* NetworkExtension.framework in Frameworks */,
+				52EB3AAF2768201E0022DE6E /* E4link.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		525687EF276A88EE003EB94D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				525687F3276A88EE003EB94D /* SwiftOSC.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52F668B3276A880500D6A35F /* Submodules */ = {
+			isa = PBXGroup;
+			children = (
+				525687EE276A88EE003EB94D /* iOS.xcodeproj */,
+			);
+			path = Submodules;
+			sourceTree = "<group>";
+		};
 		55591B5C1F2884AC0084CF0C = {
 			isa = PBXGroup;
 			children = (
+				52F668B3276A880500D6A35F /* Submodules */,
 				55591B671F2884AC0084CF0C /* E4tester */,
 				55591B661F2884AC0084CF0C /* Products */,
 				55591B961F2887C90084CF0C /* Frameworks */,
@@ -75,6 +113,7 @@
 		55591B671F2884AC0084CF0C /* E4tester */ = {
 			isa = PBXGroup;
 			children = (
+				52EB3AEA276985210022DE6E /* E4tester.entitlements */,
 				55591B681F2884AC0084CF0C /* AppDelegate.swift */,
 				55591B6A1F2884AC0084CF0C /* ViewController.swift */,
 				55591B6C1F2884AC0084CF0C /* Main.storyboard */,
@@ -89,8 +128,11 @@
 		55591B961F2887C90084CF0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52EB3AF427698A150022DE6E /* SwiftOSC */,
+				52EB3AF3276989F90022DE6E /* iOS */,
+				52EB3AEB276985210022DE6E /* NetworkExtension.framework */,
 				59CAB625207771C30052910F /* CoreBluetooth.framework */,
-				59CAB61D207770890052910F /* E4link.framework */,
+				52EB3AAE2768201E0022DE6E /* E4link.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,12 +165,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1310;
 				ORGANIZATIONNAME = "Felipe Castro";
 				TargetAttributes = {
 					55591B641F2884AC0084CF0C = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = KJRKB28G9Q;
 						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -141,21 +182,41 @@
 			};
 			buildConfigurationList = 55591B601F2884AC0084CF0C /* Build configuration list for PBXProject "E4tester" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
 			mainGroup = 55591B5C1F2884AC0084CF0C;
+			packageReferences = (
+				52EB3AE82769825A0022DE6E /* XCRemoteSwiftPackageReference "SwiftOSC" */,
+				52EB3AE9276983820022DE6E /* XCRemoteSwiftPackageReference "OSCKit" */,
+			);
 			productRefGroup = 55591B661F2884AC0084CF0C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 525687EF276A88EE003EB94D /* Products */;
+					ProjectRef = 525687EE276A88EE003EB94D /* iOS.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				55591B641F2884AC0084CF0C /* E4tester */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		525687F3276A88EE003EB94D /* SwiftOSC.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftOSC.framework;
+			remoteRef = 525687F2276A88EE003EB94D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		55591B631F2884AC0084CF0C /* Resources */ = {
@@ -206,6 +267,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -227,14 +289,18 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = KV7PD58442;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -251,7 +317,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -265,6 +331,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -286,14 +353,18 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = KV7PD58442;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -304,10 +375,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -319,7 +391,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_MODULES_AUTOLINK = YES;
-				DEVELOPMENT_TEAM = KJRKB28G9Q;
+				CODE_SIGN_ENTITLEMENTS = E4tester/E4tester.entitlements;
+				DEVELOPMENT_TEAM = KV7PD58442;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -330,8 +404,11 @@
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = E4tester/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = Empatica.E4tester;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -349,7 +426,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_MODULES_AUTOLINK = YES;
-				DEVELOPMENT_TEAM = KJRKB28G9Q;
+				CODE_SIGN_ENTITLEMENTS = E4tester/E4tester.entitlements;
+				DEVELOPMENT_TEAM = KV7PD58442;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -360,8 +439,11 @@
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = E4tester/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = Empatica.E4tester;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -394,6 +476,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		52EB3AE82769825A0022DE6E /* XCRemoteSwiftPackageReference "SwiftOSC" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ExistentialAudio/SwiftOSC";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		52EB3AE9276983820022DE6E /* XCRemoteSwiftPackageReference "OSCKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SammySmallman/OSCKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 55591B5D1F2884AC0084CF0C /* Project object */;
 }

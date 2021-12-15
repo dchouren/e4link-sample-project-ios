@@ -1,0 +1,3 @@
+[submodule "Submodules/SwiftOSC"]
+	path = Submodules/SwiftOSC
+	url = https://github.com/ExistentialAudio/SwiftOSC.git
