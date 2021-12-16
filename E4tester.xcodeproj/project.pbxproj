@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -48,8 +48,6 @@
 		52EB3AAE2768201E0022DE6E /* E4link.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = E4link.framework; sourceTree = "<group>"; };
 		52EB3AEA276985210022DE6E /* E4tester.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = E4tester.entitlements; sourceTree = "<group>"; };
 		52EB3AEB276985210022DE6E /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
-		52EB3AF3276989F90022DE6E /* iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iOS; path = ../../../Code/SwiftOSC/Framework/iOS; sourceTree = "<group>"; };
-		52EB3AF427698A150022DE6E /* SwiftOSC */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftOSC; path = ../../../Code/SwiftOSC; sourceTree = "<group>"; };
 		55591B651F2884AC0084CF0C /* E4tester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = E4tester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55591B681F2884AC0084CF0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55591B6A1F2884AC0084CF0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -128,8 +126,6 @@
 		55591B961F2887C90084CF0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				52EB3AF427698A150022DE6E /* SwiftOSC */,
-				52EB3AF3276989F90022DE6E /* iOS */,
 				52EB3AEB276985210022DE6E /* NetworkExtension.framework */,
 				59CAB625207771C30052910F /* CoreBluetooth.framework */,
 				52EB3AAE2768201E0022DE6E /* E4link.framework */,
@@ -170,6 +166,7 @@
 				TargetAttributes = {
 					55591B641F2884AC0084CF0C = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = KV7PD58442;
 						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -190,8 +187,6 @@
 			);
 			mainGroup = 55591B5C1F2884AC0084CF0C;
 			packageReferences = (
-				52EB3AE82769825A0022DE6E /* XCRemoteSwiftPackageReference "SwiftOSC" */,
-				52EB3AE9276983820022DE6E /* XCRemoteSwiftPackageReference "OSCKit" */,
 			);
 			productRefGroup = 55591B661F2884AC0084CF0C /* Products */;
 			projectDirPath = "";
@@ -378,8 +373,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -404,11 +398,8 @@
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = E4tester/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = Empatica.E4tester;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -417,6 +408,7 @@
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -439,11 +431,8 @@
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = E4tester/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = Empatica.E4tester;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -451,6 +440,7 @@
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -476,25 +466,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		52EB3AE82769825A0022DE6E /* XCRemoteSwiftPackageReference "SwiftOSC" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ExistentialAudio/SwiftOSC";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		52EB3AE9276983820022DE6E /* XCRemoteSwiftPackageReference "OSCKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SammySmallman/OSCKit";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 55591B5D1F2884AC0084CF0C /* Project object */;
 }

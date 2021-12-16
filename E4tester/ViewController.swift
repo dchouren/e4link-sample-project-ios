@@ -143,7 +143,25 @@ class ViewController: UITableViewController {
     
     // Send the data using OSC to a laptop
     public func sendData() {
-        
+        print("Sending data")
+        let client = OSCClient(address: "192.168.5.20", port: 5005)
+
+        let message = OSCMessage(
+            OSCAddressPattern("/filter"),
+            100,
+            5.0,
+            "/filter",
+            Blob(),
+            true,
+            false,
+            nil,
+            impulse,
+            Timetag(1)
+        )
+//        let bundle = OSCBundle(Timetag(secondsSinceNow: 5.0), message)
+
+        client.send(message)
+//        client.send(bundle)
     }
 }
 
@@ -196,24 +214,25 @@ extension ViewController: EmpaticaDeviceDelegate {
     
     func didReceiveTemperature(_ temp: Float, withTimestamp timestamp: Double, fromDevice device: EmpaticaDeviceManager!) {
         
-        print("\(device.serialNumber!) TEMP { \(temp) }")
+//        print("\(device.serialNumber!) TEMP { \(temp) }")
     }
     
     func didReceiveAccelerationX(_ x: Int8, y: Int8, z: Int8, withTimestamp timestamp: Double, fromDevice device: EmpaticaDeviceManager!) {
         
-        print("\(device.serialNumber!) ACC > {x: \(x), y: \(y), z: \(z)}")
+//        print("\(device.serialNumber!) ACC > {x: \(x), y: \(y), z: \(z)}")
     }
     
     func didReceiveTag(atTimestamp timestamp: Double, fromDevice device: EmpaticaDeviceManager!) {
         
-        print("\(device.serialNumber!) TAG received { \(timestamp) }")
+//        print("\(device.serialNumber!) TAG received { \(timestamp) }")
     }
     
     func didReceiveGSR(_ gsr: Float, withTimestamp timestamp: Double, fromDevice device: EmpaticaDeviceManager!) {
         
-        print("\(device.serialNumber!) GSR { \(abs(gsr)) }")
+//        print("\(device.serialNumber!) GSR { \(abs(gsr)) }")
         
         self.updateValue(device: device, string: "\(String(format: "%.2f", abs(gsr))) µS")
+        self.sendData()
     }
     
     func didUpdate( _ status: DeviceStatus, forDevice device: EmpaticaDeviceManager!) {
